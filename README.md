@@ -1,2 +1,2 @@
 
-To install useful libraries see [doc/conda.md](doc)
+To install useful libraries see [doc](doc/conda.md)
