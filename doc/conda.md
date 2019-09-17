@@ -6,7 +6,8 @@ bash Miniconda3-latest-Linux-x86_64.sh
 bash
 conda update conda
 conda create -n sandbox -c conda-forge python=3.7 dask dask-jobqueue \
-            xarray jupyterlab cartopy zarr python-graphviz \
+            xarray jupyterlab cartopy zarr python-graphviz hvplot \
+	    intake-xarray gcsfs \
             geopandas scikit-learn netcdf4 seaborn ipywidgets \
             cmocean gsw
 conda activate sandbox
