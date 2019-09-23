@@ -9,7 +9,7 @@ conda create -n sandbox -c conda-forge python=3.7 dask dask-jobqueue \
             xarray zarr netcdf4 python-graphviz \
             jupyterlab ipywidgets \
             cartopy geopandas scikit-learn seaborn \
-            hvplot datashader nodejs \
+            hvplot geoviews datashader nodejs \
 	          intake-xarray gcsfs \
             cmocean gsw
 conda activate sandbox
