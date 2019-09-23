@@ -6,12 +6,20 @@ bash Miniconda3-latest-Linux-x86_64.sh
 bash
 conda update conda
 conda create -n sandbox -c conda-forge python=3.7 dask dask-jobqueue \
-            xarray jupyterlab cartopy zarr python-graphviz hvplot \
-	    intake-xarray gcsfs \
-            geopandas scikit-learn netcdf4 seaborn ipywidgets \
+            xarray zarr netcdf4 python-graphviz \
+            jupyterlab ipywidgets \
+            cartopy geopandas scikit-learn seaborn \
+            hvplot datashader nodejs \
+	          intake-xarray gcsfs \
             cmocean gsw
 conda activate sandbox
+jupyter labextension install @jupyter-widgets/jupyterlab-manager \
+                             @pyviz/jupyterlab_pyviz \
+                             jupyter-leaflet \
+                             dask-labextension@1.0.0
 ```
+
+See `pangeo-tutorial/binder/environment.yml` and `pangeo-tutorial/binder/postBuild` on [pangeo-tutorial](https://github.com/pangeo-data/pangeo-tutorial)
 
 Uninstall library after `pip install -e .`:
 - remove the egg file ( `print(distributed.__file__)` for example)
@@ -64,7 +72,7 @@ conda info --envs
 ```
 Delete an environment
 ```
-conda remove --name myenv --all
+conda remove --name sandbox --all
 ```
 View a list of packages and versions installed in an environmentSearch for a package
 ```
