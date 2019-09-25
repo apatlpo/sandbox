@@ -11,7 +11,8 @@ conda create -n sandbox -c conda-forge python=3.7 dask dask-jobqueue \
             cartopy geopandas scikit-learn seaborn \
             hvplot geoviews datashader nodejs \
 	          intake-xarray gcsfs \
-            cmocean gsw
+            cmocean gsw \
+            pytide pyinterp
 conda activate sandbox
 jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @pyviz/jupyterlab_pyviz \
